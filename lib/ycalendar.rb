@@ -1,3 +1,11 @@
+require 'active_support'
+require 'active_record'
+
+require 'ycalendar/version'
+
+require 'concerns/calendar_relation'
+
 module Ycalendar
-  # Your code goes here...
 end
+
+ActiveRecord::Base.send(:include, Ycalendar::CalendarRelation)

@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class Ycalendar::Test < ActiveSupport::TestCase
-  test "truth" do
-    assert_kind_of Module, Ycalendar
+  describe 'verison' do
+    it 'version should not be nil' do
+      Ycalendar::VERSION.wont_be_nil
+    end
   end
 end
