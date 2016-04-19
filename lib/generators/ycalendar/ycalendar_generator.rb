@@ -1,16 +1,18 @@
-class InstallGenerator < Rails::Generators::NamedBase
-  desc "Create Ycalendar's base files"
-  argument :name, type: :string
-  source_root File.expand_path('../templates', __FILE__)
+require 'rails/generators'
 
-  def add_model
-    path = "#{Rails.root}/app/models/#{self.name}.rb"
-    if File.exists?(path)
-      puts "Skipping as file #{self.name}.rb already exists!"
-    else
-      puts "Adding calendar (app/models/#{self.name}.rb)..."
-      template "calendar.rb", path
+module Ycalendar
+  module Generators
+    class YcalendarGenerator < Rails::Generators::NamedBase
+      namespace "ycalendar"
+      desc "Generates a model with the given NAME (if one does not exist) with devise " <<
+           "configuration plus a migration file and devise routes."
+
+      hook_for :orm
+
+      # def install_ycalendar
+      #   exec("rails g ycalendar:install #{name}")
+      # end
+
     end
   end
-
 end

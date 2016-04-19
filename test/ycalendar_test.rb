@@ -1,9 +1,7 @@
 require 'test_helper'
 
 class Ycalendar::Test < ActiveSupport::TestCase
-  describe 'verison' do
-    it 'version should not be nil' do
-      Ycalendar::VERSION.wont_be_nil
-    end
+  test 'version should not be nil' do
+    assert_not_nil Ycalendar::VERSION
   end
 end

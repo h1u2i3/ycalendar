@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Ycalendar::VERSION
   s.authors     = ["imconfused"]
   s.email       = ["286390860@qq.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Ycalendar."
-  s.description = "TODO: Description of Ycalendar."
+  s.homepage    = "https://github.com/h1u2i3/ycalendar"
+  s.summary     = "A simple calendar for rails."
+  s.description = "Ycalendar can help your create simple calendar."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
